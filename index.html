@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PopDragonArt</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        body {
+            background: url('https://source.unsplash.com/1600x900/?texture,abstract') center/cover fixed;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+        }
+        nav {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 1rem;
+        }
+        nav ul li a {
+            color: white;
+            font-weight: bold;
+        }
+        .hero {
+            background: url('https://source.unsplash.com/1600x600/?neon,art') center/cover;
+            text-align: center;
+            padding: 5rem 1rem;
+            box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.7);
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 2rem 0;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .paypal-button {
+            background: #ff0077;
+            padding: 12px 24px;
+            border-radius: 5px;
+            color: white;
+            font-size: 1.2rem;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            text-align: center;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="container-fluid">
+        <ul>
+            <li><strong>PopDragonArt</strong></li>
+        </ul>
+        <ul>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact" role="button">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <header class="hero">
+        <h1>PopDragonArt</h1>
+        <p>Fusing Art with Bold Expression</p>
+    </header>
+    
+    <main class="container">
+        <h2 id="gallery">Gallery</h2>
+        <p>Browse through my latest creations.</p>
+        <div class="gallery">
+            <img src="https://source.unsplash.com/400x400/?art,modern" alt="Artwork 1">
+            <img src="https://source.unsplash.com/400x400/?painting,abstract" alt="Artwork 2">
+            <img src="https://source.unsplash.com/400x400/?graffiti,streetart" alt="Artwork 3">
+        </div>
+        
+        <h2 id="about">About</h2>
+        <p>PopDragonArt is about pushing artistic boundaries with a professional yet edgy style.</p>
+        
+        <h2>Support My Work</h2>
+        <p>If you enjoy my art, you can support me through PayPal.</p>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="your-paypal-email@example.com">
+            <input type="hidden" name="item_name" value="Artwork">
+            <input type="hidden" name="amount" value="50.00">
+            <input type="hidden" name="currency_code" value="USD">
+            <button type="submit">Buy Now</button>
+        </form>
+    </main>
+    
+    <footer>
+        <small><a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a></small>
+    </footer>
+</body>
+</html>
